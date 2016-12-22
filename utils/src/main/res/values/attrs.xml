@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--签名-->
+    <declare-styleable name="SignaturePad">
+        <attr name="penMinWidth" format="dimension" />
+        <attr name="penMaxWidth" format="dimension" />
+        <attr name="penColor" format="color" />
+        <attr name="velocityFilterWeight" format="float" />
+        <attr name="clearOnDoubleClick" format="boolean"/>
+    </declare-styleable>
+
+    <!--时间选择-->
+    <declare-styleable name="TimeSelectView">
+        <attr name="is_link" format="boolean" />
+        <attr name="year_befor" format="integer" />
+        <attr name="year_ago" format="integer" />
+    </declare-styleable>
+</resources>

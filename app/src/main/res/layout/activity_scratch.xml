@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <TextView
+        android:id="@+id/id_tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />-->
+
+    <FrameLayout
+        android:id="@+id/id_fl_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/id_tv_befor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="刮奖前"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_tv_after"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="刮奖后"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+    <com.gh.utils.views.scratch.ScratchTextView
+        android:id="@+id/id_stv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="中奖啦"/>
+
+    <com.gh.utils.views.scratch.ScratchImageView
+        android:layout_gravity="center"
+        android:id="@+id/id_siv"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/page_three"/>
+
+</LinearLayout>

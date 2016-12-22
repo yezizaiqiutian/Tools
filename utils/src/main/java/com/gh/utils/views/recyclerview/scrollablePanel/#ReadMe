@@ -1,0 +1,8 @@
+https://github.com/Kelin-Hong/ScrollablePanel
+可以横竖滑动的控件
+可做课表等
+
+
+res:
+listitem_content_row.xml
+view_scrollable_panel.xml

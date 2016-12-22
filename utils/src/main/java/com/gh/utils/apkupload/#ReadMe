@@ -1,0 +1,8 @@
+https://github.com/chiclaim/android-app-update
+http://blog.csdn.net/johnny901114/article/details/51472600
+
+需要注册ApkInstallReceiver
+
+如果需要监听下载进度等其他要求参考：
+http://www.trinea.cn/android/android-downloadmanager/
+http://blog.csdn.net/sun6223508/article/details/9290583

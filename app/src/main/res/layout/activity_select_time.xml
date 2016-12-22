@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.gh.tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.gh.utils.views.selectTime.view.TimeSelectView
+        android:id="@+id/id_tsv"
+        app:is_link="true"
+        app:year_befor="3"
+        app:year_ago="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:text="获取时间"
+        android:id="@+id/id_tv_getTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="设为当前时间"
+        android:id="@+id/id_tv_setCurrentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="设为某一时间"
+        android:id="@+id/id_tv_setNorTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

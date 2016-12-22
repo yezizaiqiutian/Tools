@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gh.tools">
+
+    <!--联网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--相册-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--相机-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--读写SD-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--闹钟-->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!--打电话-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--读取手机状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--联网-->
+        <activity
+            android:name=".net.NetActivity"
+            android:screenOrientation="portrait" />
+
+        <!--时间选择-->
+        <activity
+            android:name=".selectTime.SelectTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <!--签名-->
+        <activity
+            android:name=".sign.SignActivity"
+            android:screenOrientation="portrait" />
+
+        <!--头像裁剪-->
+        <activity
+            android:name=".clip.ClipActivity"
+            android:screenOrientation="portrait" />
+
+        <!--头像裁剪后显示-->
+        <activity
+            android:name=".clip.ClipShowActivity"
+            android:screenOrientation="portrait" />
+
+        <!--相册拍照-->
+        <activity
+            android:name=".photo.PhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <!--通知栏-->
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:screenOrientation="portrait" />
+
+        <!--圆图/圆角-->
+        <activity
+            android:name=".glide.CircleRoundActivity"
+            android:screenOrientation="portrait" />
+
+        <!--图片下载-->
+        <activity
+            android:name=".glide.GlideDownLoadActivity"
+            android:screenOrientation="portrait" />
+
+        <!--选择日期-->
+        <activity
+            android:name=".selectDate.SelectDateActivity"
+            android:screenOrientation="portrait" />
+
+        <!--行程规划-->
+        <activity
+            android:name=".map.MapLinePlanActivity"
+            android:screenOrientation="portrait" />
+
+        <!--本地推送-->
+        <activity
+            android:name=".localPush.LocalPushActivity"
+            android:screenOrientation="portrait" />
+
+        <!--设置时钟-->
+        <activity
+            android:name=".clock.ClockActivity"
+            android:screenOrientation="portrait" />
+
+        <!--刮奖-->
+        <activity
+            android:name=".scratch.ScratchActivity"
+            android:screenOrientation="portrait" />
+
+        <!--bottomsheet-->
+        <activity
+            android:name=".bottomsheet.BottomSheetActivity"
+            android:screenOrientation="portrait" />
+
+        <!--6.0权限-->
+        <activity
+            android:name=".permission.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--6.0权限-->
+        <activity
+            android:name=".permission.BlankActivity"
+            android:screenOrientation="portrait" />
+
+        <!--WebView-->
+        <activity
+            android:name=".webView.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--WebView-->
+        <activity
+            android:name=".scrollablePanel.ScrollablePanelActivity"
+            android:screenOrientation="portrait" />
+
+        <!--把控件的样子保存成Bitmap/图片文件-->
+        <activity
+            android:name=".saveViewAsBitmap.SaveViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--LuBan压缩工具用法-->
+        <activity
+            android:name=".luban.LuBanActivity"
+            android:screenOrientation="portrait" />
+
+        <!--com.gh.tools.indexaberecyclerview.IndexableRVActivity-->
+        <activity
+            android:name=".indexaberecyclerview.IndexableRVActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".indexaberecyclerview.city.PickCityActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".indexaberecyclerview.contact.PickContactActivity"
+            android:screenOrientation="portrait" />
+
+        <!--Apk更新-->
+        <activity
+            android:name=".apkupload.ApkUploadActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.gh.utils.apkupload.receivers.ApkInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

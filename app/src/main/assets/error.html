@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>行程介绍</title>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <script type="text/javascript">
+        function showError() {
+            javascript:control.showError();
+            toastClick();
+        }
+        function onError(){
+            window.AndroidToast.onError();
+        }
+        function log(msg){
+            console.log(msg);
+        }
+
+    </script>
+    <style>
+    a{text-decoration: none;}
+a:hover{text-decoration: none;}
+.error2{background: url(images/erroricon.png) 0 0 no-repeat;width:4.46875rem;height:3.9375rem;margin:2.34375rem auto 0;background-size:100% auto;}
+.errorCon{font-size:16px;color:#777;text-align:center;}
+[data-dpr="2"] .errorCon{font-size:32px;}
+[data-dpr="3"] .errorCon{font-size:48px;}
+.errorTit{margin-top:0.28125rem;margin-bottom:0.15625rem}
+.errorCon .resit{display:block;width:3.125rem;height:1.25rem;line-height: 1.25rem;color:#fff;font-size:18px;text-align:center;background-color: #1fbad1;border-radius: 0.15625rem;margin:0.84375rem auto;}
+[data-dpr="2"] .errorCon .resit{font-size:36px;}
+[data-dpr="3"] .errorCon .resit{font-size:54px;}
+
+    </style>
+</head>
+<body>
+<div class="errorCon">
+    <div class="error2"></div>
+    <div class="errorTit">网络出错</div>
+    <div>请检查您的手机是否联网</div>
+    <a href="javascript:void(0)" class="resit" onClick="window.jsinterface.onError()"/>点我重试</a>
+</div>
+</body>
+</html>
