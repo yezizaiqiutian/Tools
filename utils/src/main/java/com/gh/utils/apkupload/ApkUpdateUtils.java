@@ -12,6 +12,7 @@ import android.util.Log;
  * Created by chiclaim on 2016/05/18
  */
 public class ApkUpdateUtils {
+
     public static final String TAG = ApkUpdateUtils.class.getSimpleName();
 
     private static final String KEY_DOWNLOAD_ID = "downloadId";

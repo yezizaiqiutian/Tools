@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="start|top"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="right"
     android:background="@color/white"
     android:clickable="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
+    <!--设置layout_gravity选择左侧或右侧-->
+    <!--android:layout_gravity="right"-->
+    <!--android:layout_gravity="start|top"-->
+
+    <!--通过layout_width来控制显示的宽高-->
 
     <FrameLayout
         android:layout_width="match_parent"

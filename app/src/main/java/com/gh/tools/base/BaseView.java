@@ -15,4 +15,5 @@ public interface BaseView {
     void showToast(String msg);
 
     void showToast(int msg);
+
 }

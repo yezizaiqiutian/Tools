@@ -105,4 +105,5 @@ public abstract class BaseActivity extends AppCompatActivity {
         //记住每个Activity,用于退出登录
         ActivityCollector.removeActivity(this);
     }
+
 }

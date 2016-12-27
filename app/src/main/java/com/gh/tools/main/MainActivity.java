@@ -58,6 +58,7 @@ public class MainActivity extends BaseActivity {
 
     @Bind(R.id.fab)
     FloatingActionButton mFabBtn;
+
     private MainAdapter mAdapter;
     private MainAdapter mSlidingAdapter;
 
@@ -74,7 +75,7 @@ public class MainActivity extends BaseActivity {
         mFabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                T.S(MainActivity.this,"点击");
+                T.S(MainActivity.this, "点击");
             }
         });
     }
@@ -88,84 +89,41 @@ public class MainActivity extends BaseActivity {
 
         id_rv_sliding_list.setHasFixedSize(true);
         id_rv_sliding_list.setLayoutManager(new LinearLayoutManager(this));
-        mSlidingAdapter = new MainAdapter(this, R.layout.rv_item_text, getListSliding());
+//        mSlidingAdapter = new MainAdapter(this, R.layout.rv_item_text, getListSliding());
+        mSlidingAdapter = new MainAdapter(this, R.layout.rv_item_text, getList());
         id_rv_sliding_list.setAdapter(mSlidingAdapter);
     }
 
     @Override
     protected void initListener() {
-        id_rv_list.addOnItemTouchListener(new OnItemClickListener() {
-            @Override
-            public void SimpleOnItemClick(BaseQuickAdapter adapter, View view, int position) {
-                switch (position) {
-                    case 0:
-                        NetActivity.actionStart(mContext);
-                        break;
-                    case 1:
-                        SelectTimeActivity.actionStart(mContext);
-                        break;
-                    case 2:
-                        SelectDateActivity.actionStart(mContext);
-                        break;
-                    case 3:
-                        SignActivity.actionStart(mContext);
-                        break;
-                    case 4:
-                        ClipShowActivity.actionStart(mContext);
-                        break;
-                    case 5:
-                        PhotoActivity.actionStart(mContext);
-                        break;
-                    case 6:
-                        NotificationActivity.actionStart(mContext);
-                        break;
-                    case 7:
-                        CircleRoundActivity.actionStart(mContext);
-                        break;
-                    case 8:
-                        GlideDownLoadActivity.actionStart(mContext);
-                        break;
-                    case 9:
-                        MapLinePlanActivity.actionStart(mContext);
-                        break;
-                    case 10:
-                        LocalPushActivity.actionStart(mContext);
-                        break;
-                    case 11:
-                        ClockActivity.actionStart(mContext);
-                        break;
-                    case 12:
-                        ScratchActivity.actionStart(mContext);
-                        break;
-                    case 13:
-                        BottomSheetActivity.actionStart(mContext);
-                        break;
-                    case 14:
-                        PermissionsActivity.actionStart(mContext);
-                        break;
-                    case 15:
-                        WebViewActivity.actionStart(mContext);
-                        break;
-                    case 16:
-                        ScrollablePanelActivity.actionStart(mContext);
-                        break;
-                    case 17:
-                        SaveViewActivity.actionStart(mContext);
-                        break;
-                    case 18:
-                        LuBanActivity.actionStart(mContext);
-                        break;
-                    case 19:
-                        IndexableRVActivity.actionStart(mContext);
-                        break;
-                    case 20:
-                        ApkUploadActivity.actionStart(mContext);
-                        break;
-                }
-            }
-        });
+        id_rv_list.addOnItemTouchListener(onItemClickListener);
 //        mAdapter.setOnRecyclerViewItemClickListener(this);
 //        mSlidingAdapter.setOnRecyclerViewItemClickListener(this);
+
+        //slide监听打开关闭
+        DrawerLayout.DrawerListener l = new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                T.S(mActivity, "打开");
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                T.S(mActivity, "关闭");
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+
+            }
+        };
+
+        id_dl_root.addDrawerListener(l);
     }
 
     public List<String> getList() {
@@ -198,6 +156,79 @@ public class MainActivity extends BaseActivity {
 
         return list;
     }
+
+
+
+    OnItemClickListener onItemClickListener = new OnItemClickListener() {
+        @Override
+        public void SimpleOnItemClick(BaseQuickAdapter adapter, View view, int position) {
+            switch (position) {
+                case 0:
+                    NetActivity.actionStart(mContext);
+                    break;
+                case 1:
+                    SelectTimeActivity.actionStart(mContext);
+                    break;
+                case 2:
+                    SelectDateActivity.actionStart(mContext);
+                    break;
+                case 3:
+                    SignActivity.actionStart(mContext);
+                    break;
+                case 4:
+                    ClipShowActivity.actionStart(mContext);
+                    break;
+                case 5:
+                    PhotoActivity.actionStart(mContext);
+                    break;
+                case 6:
+                    NotificationActivity.actionStart(mContext);
+                    break;
+                case 7:
+                    CircleRoundActivity.actionStart(mContext);
+                    break;
+                case 8:
+                    GlideDownLoadActivity.actionStart(mContext);
+                    break;
+                case 9:
+                    MapLinePlanActivity.actionStart(mContext);
+                    break;
+                case 10:
+                    LocalPushActivity.actionStart(mContext);
+                    break;
+                case 11:
+                    ClockActivity.actionStart(mContext);
+                    break;
+                case 12:
+                    ScratchActivity.actionStart(mContext);
+                    break;
+                case 13:
+                    BottomSheetActivity.actionStart(mContext);
+                    break;
+                case 14:
+                    PermissionsActivity.actionStart(mContext);
+                    break;
+                case 15:
+                    WebViewActivity.actionStart(mContext);
+                    break;
+                case 16:
+                    ScrollablePanelActivity.actionStart(mContext);
+                    break;
+                case 17:
+                    SaveViewActivity.actionStart(mContext);
+                    break;
+                case 18:
+                    LuBanActivity.actionStart(mContext);
+                    break;
+                case 19:
+                    IndexableRVActivity.actionStart(mContext);
+                    break;
+                case 20:
+                    ApkUploadActivity.actionStart(mContext);
+                    break;
+            }
+        }
+    };
 
     public List<String> getListSliding() {
         List<String> list = new ArrayList<>();

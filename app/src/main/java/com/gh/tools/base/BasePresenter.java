@@ -9,4 +9,5 @@ package com.gh.tools.base;
 public interface BasePresenter {
 
     void recycle();
+
 }
