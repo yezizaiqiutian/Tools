@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//greendao1
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 24
@@ -47,6 +49,23 @@ tasks.withType(JavaCompile) {
 }
 //retrolambda表达式配置
 
+//greendao2
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.gh.tools.greendao.gen'
+    targetGenDir 'src/main/java'
+}
+//greendao2
+
 def SUPPORT_VERSION = "24.2.1"
 
 dependencies {
@@ -58,4 +77,7 @@ dependencies {
 //    compile project(':toolutils')
     compile project(':utils')
 
+
+    //greendao3
+    compile 'org.greenrobot:greendao:3.0.1'
 }

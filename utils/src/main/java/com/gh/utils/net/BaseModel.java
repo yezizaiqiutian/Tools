@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * author: gh
  * time: 2016/10/5.
- * description:
+ * description: Model基类
  */
 public class BaseModel<T> implements Serializable{
     public String error;

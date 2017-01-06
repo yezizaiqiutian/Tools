@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.gh.tools.R;
@@ -16,6 +17,7 @@ import com.gh.tools.clip.ClipShowActivity;
 import com.gh.tools.clock.ClockActivity;
 import com.gh.tools.glide.CircleRoundActivity;
 import com.gh.tools.glide.GlideDownLoadActivity;
+import com.gh.tools.greendao.GreenDaoActivity;
 import com.gh.tools.indexaberecyclerview.IndexableRVActivity;
 import com.gh.tools.localPush.LocalPushActivity;
 import com.gh.tools.luban.LuBanActivity;
@@ -65,6 +67,9 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //禁止截屏  只有这一句
+        getWindow().addFlags(WindowManager.LayoutParams. FLAG_SECURE);
+
         setContentView(R.layout.activity_list);
         ButterKnife.bind(this);
     }
@@ -149,15 +154,13 @@ public class MainActivity extends BaseActivity {
         list.add("LuBan压缩工具用法");
         list.add("indexablerecyclerview");
         list.add("Apk更新");
-        list.add("截取头像");
+        list.add("数据库greendao");
         list.add("截取头像");
         list.add("截取头像");
         list.add("截取头像");
 
         return list;
     }
-
-
 
     OnItemClickListener onItemClickListener = new OnItemClickListener() {
         @Override
@@ -225,6 +228,9 @@ public class MainActivity extends BaseActivity {
                     break;
                 case 20:
                     ApkUploadActivity.actionStart(mContext);
+                    break;
+                case 21:
+                    GreenDaoActivity.actionStart(mContext);
                     break;
             }
         }

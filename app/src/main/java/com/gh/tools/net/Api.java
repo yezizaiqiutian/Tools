@@ -14,6 +14,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Api {
 
+    private static final String baseUrl = "http://gank.io";
+    /**
+     * 单例
+     */
     private static ApiService SERVICE;
 
     public static ApiService getDefault() {
@@ -23,7 +27,7 @@ public class Api {
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logging).build();
             SERVICE = new Retrofit.Builder()
-                    .baseUrl("http://gank.io")
+                    .baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .client(client)

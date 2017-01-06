@@ -162,6 +162,11 @@
             </intent-filter>
         </receiver>
 
+        <!--数据库greendao-->
+        <activity
+            android:name=".greendao.GreenDaoActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

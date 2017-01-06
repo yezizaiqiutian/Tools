@@ -22,7 +22,7 @@ import rx.Observable;
 
 /**
  * @author: gh
- * @description:
+ * @description: 联网retrofit+rxjava
  * @date: 2016/10/14 17:06.
  */
 public class NetActivity extends BaseActivity {
