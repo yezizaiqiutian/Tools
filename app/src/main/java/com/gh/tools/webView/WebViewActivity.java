@@ -88,6 +88,7 @@ public class WebViewActivity extends BaseActivity {
 
     private void initWebView() {
         id_webView.loadUrl("http://www.baidu.com");
+//        id_webView.loadUrl("http://test.igenshang.com:8001/h5/web/schedule/getScheduleShow?flag=introduce&teamId=%40TGS%231G43JBLEI&client_id=BG9CJ9WRB&access_token=028fab81-ca71-4939-b8bd-70d9a6fc2510&timestamp=1484623331755&ver=1.0&sign=03DF773A0C1611623E4FBAA7BA44E3BE");
     }
 
     private void initWebSettings() {
